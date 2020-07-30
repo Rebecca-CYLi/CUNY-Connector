@@ -146,7 +146,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/CUNY-Connector/dev/1595452597829-2020-07-22T21:16:37.829Z/CUNY-Connector.zip"
+          "S3Key": "serverless/CUNY-Connector/dev/1595472355066-2020-07-23T02:45:55.066Z/CUNY-Connector.zip"
         },
         "FunctionName": "CUNY-Connector-dev-app",
         "Handler": "app.handler",
@@ -164,14 +164,14 @@
         "AppLogGroup"
       ]
     },
-    "AppLambdaVersionwMxb2zCwMaHvYJBOQdGhrIubilt1vJdopuXvtehQM": {
+    "AppLambdaVersion9yBJFexhW6ycDrxqqxxIdFJeaKcCHtQHqqCjlsnRpE": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AppLambdaFunction"
         },
-        "CodeSha256": "VIjItI/8/aZURGTf4yZtXf6kOxvdxEcl7U2Bef/qAnE="
+        "CodeSha256": "BgXn2hmZGepKS2rd3+aqNfYBn84jCkQ7IIzjiGup+24="
       }
     },
     "ApiGatewayRestApi": {
@@ -290,7 +290,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1595452579410": {
+    "ApiGatewayDeployment1595472334387": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -350,7 +350,7 @@
     "AppLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AppLambdaVersionwMxb2zCwMaHvYJBOQdGhrIubilt1vJdopuXvtehQM"
+        "Ref": "AppLambdaVersion9yBJFexhW6ycDrxqqxxIdFJeaKcCHtQHqqCjlsnRpE"
       }
     },
     "ServiceEndpoint": {

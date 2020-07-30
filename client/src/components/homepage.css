@@ -1,0 +1,24 @@
+
+body{
+    background-color:#d9d9d9;
+}
+
+.home{
+    /* background-image:url("https://static.wixstatic.com/media/d0baa86e29104d48b0387a894600ecca.jpg/v1/fill/w_1024,h_991,al_c,q_85,usm_0.66_1.00_0.01/d0baa86e29104d48b0387a894600ecca.webp"); */
+    background-repeat: no-repeat;
+    background-size: 1500px 1000px;
+}
+
+.display-3{
+    text-align:center;
+    color:#ffbd59;
+    font-family: 'Dosis', sans-serif;
+}
+
+#headline{
+    text-align:center;
+    color:white;
+    font-family: 'Dosis', sans-serif;
+}
+   
+   

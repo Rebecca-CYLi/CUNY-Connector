@@ -2,7 +2,8 @@
 
 service: CUNY-Connector
         # cuny-connector-react-express-app
-
+        
+# The `provider` block defines where your service will be deployed
 provider:
   name: aws
   runtime: nodejs12.x

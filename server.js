@@ -3,7 +3,6 @@
 // This is where will create the Express server, so consider it the 
 // lifeblood of our backend.
 
-
 const serverless = require('serverless-http');
 const express = require('express');
 const app = express();
