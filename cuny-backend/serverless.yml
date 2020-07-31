@@ -1,6 +1,6 @@
 # NOTE: update this with your service name
-service: notes-app-api
-  # cuny-backend
+service: cuny-backend 
+  # notes-app-api
 
 # Create an optimized package for our functions 
 package:
@@ -45,11 +45,12 @@ resources:
 
 
 functions:
-  handler:
-    handler: handler.hello
-    events:
-      - http: ANY /
-      - http: 'ANY {proxy+}'
+  # handler:
+  #   handler: handler.hello
+  #   events:
+  #     - http: ANY /
+  #     - http: 'ANY {proxy+}'
+
   # Defines an HTTP API endpoint that calls the main function in create.js
   # - path: url path is /notes
   # - method: POST request
@@ -60,7 +61,8 @@ functions:
     handler: create.main
     events:
       - http:
-          path: notes
+          path: /User
+            #notes
           method: post
           cors: true
           authorizer: aws_iam
@@ -72,7 +74,8 @@ functions:
     events:
       - http:
           # path: notes/{id}
-          path: notes      
+          # path: notes 
+          path: /User/{email}     
           method: get
           cors: true
           authorizer: aws_iam
@@ -83,7 +86,8 @@ functions:
       handler: list.main
       events:
         - http:
-            path: notes
+            # path: notes
+            path: /User
             method: get
             cors: true
             authorizer: aws_iam
@@ -94,7 +98,8 @@ functions:
     handler: update.main
     events:
       - http:
-          path: notes/{id}
+          # path: notes/{id}
+          path: /User/{email}
           method: put
           cors: true
           authorizer: aws_iam
@@ -106,7 +111,8 @@ functions:
     handler: delete.main
     events:
       - http:
-          path: notes/{id}
+          # path: notes/{id}
+          path: /User/{email}
           method: delete
           cors: true
           authorizer: aws_iam

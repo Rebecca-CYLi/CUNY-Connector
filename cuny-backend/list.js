@@ -11,14 +11,22 @@ export const main = handler(async (event, context) => {
     // 'ExpressionAttributeValues' defines the value in the condition
     // - ':userId': defines 'userId' to be Identity Pool identity id
     //   of the authenticated user
-    KeyConditionExpression: "userId = :userId",
+    // KeyConditionExpression: "userId = :userId",
+    // ExpressionAttributeValues: {
+    //   ":userId": {S:'USER-SUB-1234'}
+    // }
+    KeyConditionExpression: "email = :email",
     ExpressionAttributeValues: {
-      ":userId": event.requestContext.identity.cognitoIdentityId
+      ":email": {S:`{event.email}`}
     }
   };
+
+  // return event.requestContext.identity.cognitoIdentityId;
 
   const result = await dynamoDb.query(params);
 
   // Return the matching list of items in response body
   return result.Items;
+
+  //  return params;
 });
