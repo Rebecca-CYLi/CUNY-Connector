@@ -4,6 +4,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import { Button, Row, Col, } from "react-bootstrap";
+import Profile from "./Profile";
 
 export default class SababaForm extends Component {
     constructor(props) {
@@ -33,7 +34,7 @@ export default class SababaForm extends Component {
         await axios.post(
             'https://up076quzuj.execute-api.us-east-1.amazonaws.com/dev/users',
             { email: `${email}`, password: `${password}`, 
-                firstName: `${firstName}`, lastName: `${lastName}` }
+            firstName: `${firstName}`, lastName: `${lastName}` }
         );
     }
 
@@ -301,8 +302,10 @@ export default class SababaForm extends Component {
                     </Button>
                 </Form>
                 <br></br>
+
+                {/* Trying out Profile Page, sending data from backend */}
+                <Profile />
             </div>
         );
     }
-
 }

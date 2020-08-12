@@ -1,7 +1,6 @@
 Tutorial Link: https://medium.com/@maison.moa/setting-up-an-express-backend-server-for-create-react-app-bc7620b20a61
 
 
-
 Deployig React Frontend to S3:
 https://medium.com/ovrsea/deploy-automatically-a-react-app-on-amazon-s3-iam-within-minutes-da6cb0096d55
 Anytime you want to update you app, juste run npm run build and npm run deploy !
@@ -11,3 +10,9 @@ In the Backend:
 https://serverless-stack.com/chapters/setup-the-serverless-framework.html
 + aws-sdk allows us to talk to the various AWS services.
 + uuid generates unique ids. We need this for storing things to DynamoDB.
+
+
+Bootstrap for Profile Display:
+https://bootsnipp.com/snippets/25zz
+https://bootsnipp.com/snippets/1e9Zq
+
