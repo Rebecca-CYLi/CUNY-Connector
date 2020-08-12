@@ -23,8 +23,6 @@ function rootReducer(state = initialState, action) {
   }
 
 
-
-
   if (action.type === SHOW_MATCH_PROFILE) {
     return Object.assign({}, state, {
       isActive: true

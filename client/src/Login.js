@@ -3,7 +3,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import { Button, Row, Col } from "react-bootstrap";
-
 import { withRouter } from 'react-router-dom'; 
 import { connect } from "react-redux";
 import store from './redux/store';

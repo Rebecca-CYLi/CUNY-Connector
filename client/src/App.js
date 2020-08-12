@@ -22,23 +22,24 @@ import Signup from "./Signup";
 import Profile from "./Profile";
 import Home from "./Home";
 import Match from "./Match";
-// import { render } from 'react-dom';
-
 import { connect } from 'react-redux';
 import store from './redux/store';
+import { addEmail, showMatchnProfile } from "./redux/actions/index";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isActive: false
+    this.state = { //gets updated here
+
+        isActive: false
     };
   }
 
   render() {
-    const { isActive } = store.getState().isActive;
+    const isActive  = store.getState().isActive;
     // const {isActive} = this.state;
     console.log("from APP, isActive: " + isActive);
+    
 
     return (
       <div className="App">
@@ -113,6 +114,4 @@ class App extends Component {
     );
   }
 }
-
-
 export default App;

@@ -21,15 +21,13 @@
 
 
 import React from "react";
-// import ReactDOM from 'react-dom';
 import { render } from "react-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store/index";
 import App from "./App";
 import { BrowserRouter as Router} from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
-// import index from "./redux/index";
-// import {SHOW_MATCH_PROFILE} from "./redux/constants/action-types";
+import index from "./redux/index";
 
 // render(
 //   <Provider store={store}>
