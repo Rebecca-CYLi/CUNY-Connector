@@ -1,15 +1,3 @@
-// import React from 'react';
-// import './App.css';
-// import SababaForm from './Form.js';
-// function App() {
-//   return (
-//     <div className="App">
-//         <SababaForm />
-//     </div>
-//   );
-// }
-// export default App;
-
 import React, { Component } from 'react';
 import './App.css';
 import {
@@ -23,23 +11,21 @@ import Profile from "./Profile";
 import Home from "./Home";
 import Match from "./Match";
 import { connect } from 'react-redux';
-import store from './redux/store';
-import { addEmail, showMatchnProfile } from "./redux/actions/index";
+// import store from './redux/store';
+// import { addEmail, showMatchnProfile } from "./redux/actions/index";
+
+function mapStoreToProps(store) {
+  return {
+    isActive: store.isActive
+  }
+}
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { //gets updated here
-
-        isActive: false
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
-    const isActive  = store.getState().isActive;
-    // const {isActive} = this.state;
-    console.log("from APP, isActive: " + isActive);
-    
     return (
       <div className="App">
         <Router>
@@ -67,18 +53,11 @@ class App extends Component {
                     <Nav.Link as={Link} to="/Signup" >Sign Up</Nav.Link>
                   </NavItem>
 
-                  {isActive ?
+                  {this.props.isActive ?
                     <NavItem eventkey={4} href="/">
                       <Nav.Link as={Link} to="/Match" >Match</Nav.Link>
                     </NavItem>
                     : null}
-
-
-                  {/* <NavItem eventkey={5} href="/">
-                    <Nav.Link as={Link} to="/Profile" >Profile</Nav.Link>
-                  </NavItem> */}
-
-
                 </Nav>
               </Navbar.Collapse>
 
@@ -99,9 +78,6 @@ class App extends Component {
               <Route exact path="/Profile">
                 <Profile />
               </Route>
-              {/* <Route exact path="/reduxProfile">
-                <ReduxProfile />
-              </Route> */}
               <Route exact path="/Match">
                 <Match />
               </Route>
@@ -113,4 +89,6 @@ class App extends Component {
     );
   }
 }
-export default App;
+
+const AppForm = connect(mapStoreToProps)(App);
+export default AppForm;

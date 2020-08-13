@@ -64,10 +64,15 @@ class Match extends React.Component {
 
                         </div>
 
-                    </div><br></br><br></br>
+                    </div>
+
+                    <br></br>
+                    <br></br>
+                    
                     <Button variant="secondary" type="submit" >
                         Submit
-  </Button>
+                    </Button>
+
                 </Form>
             </div>
         );

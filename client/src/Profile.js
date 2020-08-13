@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+// import React, { Component } from 'react';
+import React from 'react';
+// import { connect } from 'react-redux';
 import store from './redux/store';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,22 +9,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class Profile extends React.Component {
     constructor(props) {
         super(props);
-     
         this.state = {
-          email:'',
-          password:'',
-          firstName:'',
-          lastName:''
+            email: '',
+            password: '',
+            firstName: '',
+            lastName: ''
         };
-      }
-
+    }
 
     render() {
         const { firstName, lastName } = this.state;
-        const {email, password} = store.getState();
+        const { email} = store.getState();
         return (
             <div>
-
 
                 <div className="container main-secction">
                     <div className="row">
@@ -31,18 +29,18 @@ class Profile extends React.Component {
                             <h2>Welcome, you are now logged in!</h2>
                         </div>
                         <div className="col-md-12 col-sm-12 col-xs-12 profile-header-section1 text-center ">
-                                    <a href="/match" className="btn btn-secondary btn-block">Find your match</a>
-                                </div>
+                            <a href="/match" className="btn btn-secondary btn-block">Find your match</a>
+                        </div>
                         <div className="row user-left-part">
                             <div className="col-md-3 col-sm-3 col-xs-12 user-profil-part pull-left">
                                 <div className="row ">
                                     <div className="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center">
-                                        <img src="https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png" className="rounded-circle" />
+                                        <img src="https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png" alt="" className="rounded-circle" />
                                     </div>
                                     <div className="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
 
                                         <button className="btn btn-secondary btn-block">Upload Photo</button>
-                                        
+
 
                                     </div>
                                     <div className="row user-detail-row">
@@ -59,12 +57,12 @@ class Profile extends React.Component {
                                     <div className="col-md-12 profile-header">
                                         <div className="row">
                                             <div v="col-md-8 col-sm-6 col-xs-6 profile-header-section1 pull-left">
-                                             
+
                                                 <h1> Name </h1>
                                                 <h5>Profession</h5>
-                                               
+
                                             </div>
-                                            
+
 
                                         </div>
                                     </div>
@@ -76,117 +74,59 @@ class Profile extends React.Component {
                                                         <a className="nav-link active" href="#profile" role="tab" data-toggle="tab"><i className="fas fa-user-circle"></i>User Profile</a>
                                                     </li>
                                                     <li className="nav-item">
-                                                  <a className="nav-link active" href="#socialMedia" role="tab" data-toggle="tab"><i className="fas fa-info-circle"></i> Social Media</a>
-                                                </li>   
+                                                        <a className="nav-link active" href="#socialMedia" role="tab" data-toggle="tab"><i className="fas fa-info-circle"></i> Social Media</a>
+                                                    </li>
 
                                                 </ul>
 
 
-             <div className="tab-content">
-                <div role="tabpanel" className="tab-pane fade show active" id="profile">
-                    <div className="row">
-                        <div className="col-md-2">
-                            <label>Email</label>
-                         </div>
-                    <div className="col-md-6">
-
-                        {/* This is where store's email is displayed */}
-                        <p>{email}</p>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-2">
-                        <label>Name</label>
-                    </div>
-                    <div className="col-md-6">
-                        <p>{firstName+lastName}</p>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-2">
-                        <label>College</label>
-                    </div>
-                    <div className="col-md-6">
-                        <p> </p>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-2">
-                        <label>Year</label>
-                    </div>
-                        <div className="col-md-6">
-                            <p> </p>
-                        </div>
-                </div>
-                    <div className="row">
-                        <div className="col-md-2">
-                            <label>Skills</label>
-                        </div>
-                        <div className="col-md-6">
-                            <p> </p>
-                        </div>
-
-                                                       
-                    </div>
-
-                                                    
-                </div>
-
-                <div role="tabpanel" className="tab-pane fade" id="socialMedia">
+                                                <div className="tab-content">
+                                                    <div role="tabpanel" className="tab-pane fade show active" id="profile">
                                                         <div className="row">
-                                                                <div className="col-md-6">
-                                                                    <label>Experience</label>
-                                                                </div>
-                                                                <div className="col-md-6">
-                                                                    <p>Expert</p>
-                                                                </div>
+                                                            <div className="col-md-2">
+                                                                <label>Email</label>
                                                             </div>
-                                                            <div className="row">
-                                                                <div className="col-md-6">
-                                                                    <label>Hourly Rate</label>
-                                                                </div>
-                                                                <div className="col-md-6">
-                                                                    <p>10$/hr</p>
-                                                                </div>
+                                                            <div className="col-md-6">
+
+                                                                {/* This is where store's email is displayed */}
+                                                                <p>{email}</p>
                                                             </div>
-                                                            <div className="row">
-                                                                <div className="col-md-6">
-                                                                    <label>Total Projects</label>
-                                                                </div>
-                                                                <div className="col-md-6">
-                                                                    <p>230</p>
-                                                                </div>
+                                                        </div>
+                                                        <div className="row">
+                                                            <div className="col-md-2">
+                                                                <label>Name</label>
                                                             </div>
-                                                            <div className="row">
-                                                                <div className="col-md-6">
-                                                                    <label>English Level</label>
-                                                                </div>
-                                                                <div className="col-md-6">
-                                                                    <p>Expert</p>
-                                                                </div>
+                                                            <div className="col-md-6">
+                                                                <p>{firstName + lastName}</p>
                                                             </div>
-                                                            <div className="row">
-                                                                <div className="col-md-6">
-                                                                    <label>Availability</label>
-                                                                </div>
-                                                                <div className="col-md-6">
-                                                                    <p>6 months</p>
-                                                                </div>
+                                                        </div>
+                                                        <div className="row">
+                                                            <div className="col-md-2">
+                                                                <label>College</label>
                                                             </div>
-                                                            <div className="row">
-                                                                <div className="col-md-12">
-                                                                    <label>Your Bio</label>
-                                                                    <br/>
-                                                                    <p>Your detail description</p>
-                                                                </div>
+                                                            <div className="col-md-6">
+                                                                <p> </p>
                                                             </div>
+                                                        </div>
+                                                        <div className="row">
+                                                            <div className="col-md-2">
+                                                                <label>Year</label>
+                                                            </div>
+                                                            <div className="col-md-6">
+                                                                <p> </p>
+                                                            </div>
+                                                        </div>
+                                                        <div className="row">
+                                                            <div className="col-md-2">
+                                                                <label>Skills</label>
+                                                            </div>
+                                                            <div className="col-md-6">
+                                                                <p> </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                
-                </div>
-
-
-
-             </div>
+                                            </div>
                                             <div className="col-md-4 img-main-rightPart">
                                                 <div className="row">
                                                     <div className="col-md-12">
@@ -207,23 +147,7 @@ class Profile extends React.Component {
                         </div>
                     </div>
                 </div>
-
-                <div className="modal fade" id="contact" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog" role="document">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                
-                               
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-                
             </div>
-        
-
         );
     }
 }

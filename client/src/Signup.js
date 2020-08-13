@@ -5,23 +5,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import { Button, Row, Col, ButtonGroup, ButtonToolbar} from "react-bootstrap";
 import { withRouter } from 'react-router-dom';
-// import { get } from 'https';
-// import { isMainThread } from 'worker_threads';
 
 class Signup extends Component {
     constructor(props) {
         super(props);
-        this.state = { //gets updated here
+        this.state = {
             email: '',
             password: '',
             firstName: '',
             lastName: '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChange = this.handleChange.bind(this); //when functions are passed, we have to bind 'this'
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange(event) { //when event happens, we look at event value and set the state
+    handleChange(event) {
         const inputValue = event.target.value;
         const stateField = event.target.name;
         this.setState({
@@ -304,8 +302,3 @@ class Signup extends Component {
 }
 
 export default withRouter(Signup);
-
-
-// chechbox = true to get
-// radio button = put update each value at post
-//         TA: post it, goes to TA
