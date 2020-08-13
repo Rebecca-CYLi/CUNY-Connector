@@ -2,9 +2,8 @@
 Website for CUNY Connector
 
 
-
 FRONT END:
-Cuny-front-end folder:
+Cuny-front-end folder: (CLIENT folder - same but diff vr)
  
 In order to deploy to aws s3, run npm run build to create a build a folder for it to be able to be uploaded to a s3 bucket.
  
