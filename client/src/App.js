@@ -40,7 +40,6 @@ class App extends Component {
     // const {isActive} = this.state;
     console.log("from APP, isActive: " + isActive);
     
-
     return (
       <div className="App">
         <Router>
