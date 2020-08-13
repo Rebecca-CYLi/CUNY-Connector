@@ -19,7 +19,7 @@ class Profile extends React.Component {
 
     render() {
         const { firstName, lastName } = this.state;
-        const { email} = store.getState();
+        const { email } = store.getState();
         return (
             <div>
 
